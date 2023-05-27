@@ -133,10 +133,11 @@ Requested path was: {f}
                 open_folder_button = gr.Button(folder_symbol, visible=not shared.cmd_opts.hide_ui_dir_config)
 
                 if tabname != "extras":
-                    save = gr.Button('Save', elem_id=f'save_{tabname}')
-                    save_zip = gr.Button('Zip', elem_id=f'save_zip_{tabname}')
+                    save = gr.Button('保存图片', elem_id=f'save_{tabname}')
+                    save_zip = gr.Button('打包下载', elem_id=f'save_zip_{tabname}')
 
-                buttons = parameters_copypaste.create_buttons(["img2img", "inpaint", "extras"])
+                # buttons = parameters_copypaste.create_buttons(["img2img", "inpaint", "extras"])
+                buttons = {}
 
             open_folder_button.click(
                 fn=lambda: open_folder(shared.opts.outdir_samples or outdir),
