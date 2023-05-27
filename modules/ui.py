@@ -1178,7 +1178,7 @@ def create_ui():
                 generation_info = gr.Textbox(visible=False, elem_id="pnginfo_generation_info")
                 html2 = gr.HTML()
                 with gr.Row():
-                    buttons = parameters_copypaste.create_buttons([["txt2img", "导入模板"]])
+                    buttons = parameters_copypaste.create_buttons([["txt2img", "导入模板"], "img2img", "inpaint", "extras"])
 
                 for tabname, button in buttons.items():
                     parameters_copypaste.register_paste_params_button(parameters_copypaste.ParamBinding(
