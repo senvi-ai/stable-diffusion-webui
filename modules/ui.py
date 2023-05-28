@@ -187,7 +187,7 @@ def interrogate_deepbooru(image):
 
 def create_seed_inputs(target_interface):
     with FormRow(elem_id=f"{target_interface}_seed_row", variant="compact"):
-        seed = (gr.Textbox if cmd_opts.use_textbox_seed else gr.Number)(label='Seed', value=-1,
+        seed = (gr.Textbox if cmd_opts.use_textbox_seed else gr.Number)(label='每次生成都要输入不同的数字，长度随意', value=-1,
                                                                         elem_id=f"{target_interface}_seed")
         seed.style(container=False)
         random_seed = ToolButton(random_symbol, elem_id=f"{target_interface}_random_seed", label='Random seed')
