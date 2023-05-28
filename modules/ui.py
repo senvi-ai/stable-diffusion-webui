@@ -519,7 +519,7 @@ def create_ui():
 
                             if opts.dimensions_and_batch_together:
                                 with gr.Column(elem_id="txt2img_column_batch"):
-                                    batch_count = gr.Slider(minimum=1, step=1, label='1⃣️图片数量', value=1,
+                                    batch_count = gr.Slider(minimum=1, step=1, label='图片数量', value=1,
                                                             elem_id="txt2img_batch_count")
                                     batch_size = gr.Slider(minimum=1, maximum=8, step=1, label='Size', value=1,
                                                            elem_id="txt2img_batch_size")
